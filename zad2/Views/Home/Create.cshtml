@@ -1,0 +1,25 @@
+﻿@model zad2.Models.Dane
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    
+}
+
+<div style="text-align:center;">
+    <h3>Dane z formularza</h3>
+
+    @if(@Model.Number<=5 && @Model.Number >= 1) 
+    {
+         
+         @for(int i = 0; i < @Model.Number; i++)
+         {
+        <div style="text-align:left;">
+            @Html.DisplayNameFor(model => model.Name):@Html.DisplayFor(model => model.Name)
+        </div>
+        <br />
+        <br />
+        }
+    }
+   
+</div>
+    
+    <a asp-action="index">Powrót</a>
